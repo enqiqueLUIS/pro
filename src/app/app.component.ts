@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeroComponent } from './heroes/hero/hero.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pro';
+  public title: string = 'hola mundo';
+  public counter: number = 10;
+
+  increaseBy():void {
+    this.counter += 1;
+  }
+
+  increm():void{
+    this.counter -=1;
+  }
+
+  reset():void{
+    this.counter =0;
+  }
+
+
 }
+
+
